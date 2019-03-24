@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_margin="8dp">
+    <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:minWidth="100dp"
+            android:minHeight="150dp"
+            android:transitionName="image"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:scaleType="centerCrop"
+            android:id="@+id/iv_poster"
+            android:maxHeight="200dp"
+            android:maxWidth="200dp"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_poster"
+            app:layout_constraintStart_toStartOf="parent" android:background="#7a000000"
+            android:paddingLeft="8dp" android:paddingRight="8dp">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_title"
+                tools:text="Some movie with very long name whitch event not contains"
+                android:transitionName="title"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_subtitle"
+                tools:text="subtitle"
+                android:transitionName="subtitle"
+                android:textColor="#fff"
+                android:maxLines="1"
+                android:textSize="12sp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
